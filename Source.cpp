@@ -131,6 +131,15 @@ T Deque<T> ::getRear()
     return rear->value;
 }
 
+// Function to check if the queue is full or not.
+template <typename T>
+bool Deque<T> ::isFull()
+{
+    if (size==max_size)
+        return true;
+    else
+        return false;
+}
 
 int main() {
    
