@@ -165,9 +165,12 @@ int main() {
             LandingQueue.deleteFront();
             Runway.set_airplane(&plane);
             Runway.Runwayoccupied = true;
-           
+            
+           for (int i=1; i<=num_planes_landed; i++)
+           {
             num_planes_landed++;
-            cout << "Airplane landed at time " << t << " with wait time " << plane.getTwait() << endl;
+            cout << "Airplane number " << i << " landed at time " << t << " with wait time " << plane.getTwait() << endl;
+           }
 
         }
         if (Tr > 0) {
@@ -177,7 +180,7 @@ int main() {
     }
     double averageWaitTime = (double)TotalwaitTime / num_planes_landed;
     cout << " Number of Airplanes landed :" << num_planes_landed << endl;
-    cout << " total wait time : " << TotalwaitTime << endl;
+    cout << " Total wait time : " << TotalwaitTime << endl;
     cout << " Average wait time: " << averageWaitTime << endl;
     return 0;
 }
