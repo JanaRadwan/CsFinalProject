@@ -135,7 +135,7 @@ T Deque<T> ::getRear()
 template <typename T>
 bool Deque<T> ::isFull()
 {
-    if (size==max_size)
+    if (size == max_size)
         return true;
     else
         return false;
