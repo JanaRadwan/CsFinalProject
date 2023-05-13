@@ -28,9 +28,9 @@ class AirportRunway {
 private:
 	Airplane* airplane;    
 	int Tlanding;
-	bool Runwayoccupied = false;
-public:
 	//bool Runwayoccupied = false;
+public:
+	bool Runwayoccupied = false;
 	AirportRunway() {
 		Tlanding = 0;
 		airplane = nullptr;
