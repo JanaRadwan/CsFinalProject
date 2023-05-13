@@ -18,7 +18,7 @@ class Deque
     Node<T>* front;
     Node<T>* rear;
     int Size;
-
+    int max_size = 20;
 
 public:
     Deque<T>()
