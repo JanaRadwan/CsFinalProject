@@ -159,12 +159,17 @@ int main() {
         Airplane plane;
         float R = rand() /float(32767);   
         if (R < pa) { //check max 
+            if (Queue.isFull())
+                cout << "Error: Queue is full \n";
+            else
+            {
+                plane.setTarrival(t);
+                plane.setTwait(0);
+                LandingQueue.insertRear(plane);
+                cout << " Airplane arrived at time " << t << endl;
+            }
             
             
-            plane.setTarrival(t);
-            plane.setTwait(0);
-            LandingQueue.insertRear(plane);
-            cout << " Airplane arrived at time " << t << endl;
         }
         if (Tr == 0 && !LandingQueue.isEmpty()) { // change to boolean 
               plane = LandingQueue.getFront();
